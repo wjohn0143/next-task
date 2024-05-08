@@ -20,7 +20,7 @@
     }
   },
   "rules": {
-    "endOfLine": "auto",
+    "endOfLine": "0",
     "linebreak-style": ["error", "windows"],
     "import/prefer-default-export": 0,
     // https://stackoverflow.com/questions/69928061/struggling-with-typescript-react-eslint-and-simple-arrow-functions-components
