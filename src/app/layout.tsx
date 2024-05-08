@@ -3,7 +3,6 @@ import '@/styles/globals.scss'
 // It handles optimization and all the necessary Webpack configuration to make this work.
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import ProgressBar from '@/components/ProgressBar/ProgressBar'
 
 // You change this configuration value to false so that the Font Awesome core SVG library
 // will not try and insert <style> elements into the <head> of the page.
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ProgressBar />
+    
         {children}
       </body>
     </html>
