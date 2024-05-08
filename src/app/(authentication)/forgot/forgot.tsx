@@ -3,7 +3,7 @@ import {
   Alert, Button, Form, FormControl, InputGroup,
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 // import { faLock } from '@fortawesome/free-solid-svg-icons'
 // import { useRouter } from 'next/navigation'
 import { useState } from 'react'

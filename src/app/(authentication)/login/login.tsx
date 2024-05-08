@@ -6,46 +6,46 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 import { SyntheticEvent, useState } from 'react'
-import { deleteCookie, getCookie } from 'cookies-next'
-import axios from 'axios'
+// import { deleteCookie, getCookie } from 'cookies-next'
+// import axios from 'axios'
 import Link from 'next/link'
 import InputGroupText from 'react-bootstrap/InputGroupText'
 
 export default function Login() {
-  const router = useRouter()
+  // const router = useRouter()
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
 
-  const getRedirect = () => {
-    const redirect = getCookie('redirect')
-    if (redirect) {
-      deleteCookie('redirect')
-      return redirect.toString()
-    }
+  // const getRedirect = () => {
+  //   const redirect = getCookie('redirect')
+  //   if (redirect) {
+  //     deleteCookie('redirect')
+  //     return redirect.toString()
+  //   }
 
-    return '/'
-  }
+  //   return '/'
+  // }
 
   const login = async (e: SyntheticEvent) => {
     e.stopPropagation()
     e.preventDefault()
 
-    setSubmitting(true)
+    setSubmitting(false)
 
-    try {
-      const res = await axios.post('api/mock/login')
-      if (res.status === 200) {
-        router.push(getRedirect())
-      }
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message)
-      }
-    } finally {
-      setSubmitting(false)
-    }
+    // try {
+    //   const res = await axios.post('api/mock/login')
+    //   if (res.status === 200) {
+    //     router.push(getRedirect())
+    //   }
+    // } catch (err) {
+    //   if (err instanceof Error) {
+    //     setError(err.message)
+    //   }
+    // } finally {
+    //   setSubmitting(false)
+    // }
   }
 
   return (
@@ -58,7 +58,7 @@ export default function Login() {
       >
         {error}
       </Alert>
-      <Form>
+      <Form onSubmit={login}>
         <InputGroup className="mb-3">
           <InputGroupText>
             <FontAwesomeIcon
