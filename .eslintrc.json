@@ -12,7 +12,6 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  // https://github.com/iamturns/eslint-config-airbnb-typescript/issues/239
   // https://www.npmjs.com/package/eslint-plugin-import
   "settings": {
     "import/resolver": {
