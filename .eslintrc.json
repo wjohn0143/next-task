@@ -16,10 +16,12 @@
   // https://www.npmjs.com/package/eslint-plugin-import
   "settings": {
     "import/resolver": {
-      "typescript": true
+      "typescript": false
     }
   },
   "rules": {
+    "endOfLine": "auto",
+    "linebreak-style": ["error", "windows"],
     "import/prefer-default-export": 0,
     // https://stackoverflow.com/questions/69928061/struggling-with-typescript-react-eslint-and-simple-arrow-functions-components
     "react/function-component-definition": [
